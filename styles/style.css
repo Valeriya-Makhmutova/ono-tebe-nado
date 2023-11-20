@@ -146,7 +146,7 @@
 }
 
 .lots {
-  width: 1340px;
+  max-width: 1340px;
   height: 579px;
   margin-right: auto;
   margin-left: auto;
@@ -179,7 +179,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 430px;
-  height: 450px;
+  min-height: 450px;
   color: #fff;
   background-position: center;
   background-size: cover;
@@ -228,7 +228,7 @@
 }
 
 .lots__look-more-link {
-  display: inline-block;
+  display: block;
   margin-top: 30px;
   margin-bottom: 2px;
   margin-left: 40px;
