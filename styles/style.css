@@ -12,7 +12,6 @@
 }
 
 .header__address {
-
   line-height: 24.3px;
   margin-left: 355px;
   border: 0;
@@ -46,8 +45,8 @@
 
 .cover {
   position: relative;
-  width: 1440px;
-  height: 757px;
+  max-width: 1440px;
+  min-height: 757px;
   margin-right: auto;
   margin-bottom: 180px;
   margin-left: auto;
@@ -59,6 +58,9 @@
 
 .overlay {
   position: absolute;
+  inset: 0; /* при использовании абсолютного позиционирования
+  необходимо указывать сразу 2 координаты для правильного отображения во всех
+  браузерах, inset это шорткат для всех 4 направлений */
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -66,38 +68,37 @@
 }
 
 .cover__title {
-  position: absolute;
-  top: 165px;
-  left: 50px;
+  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1340px;
-  height: 355px;
+  max-width: 1340px;
+  width: 100%;
   font-weight: 700;
   font-size: 100px;
   font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 30px;
+  line-height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 20px;
 }
 
 .aligned-text {
   display: block;
   line-height: 115px;
-  letter-spacing: 30px;
+  margin-top: 165px;
 }
 
 .aligned-text_center {
   display: block;
-  line-height: 100px;
-  letter-spacing: 30px;
   text-align: center;
 }
 
 .aligned-text_right {
   display: block;
-  line-height: 100px;
-  letter-spacing: 30px;
   text-align: right;
 }
 
@@ -109,31 +110,33 @@
   letter-spacing: normal;
 }
 
-/*.cover__description {}*/
+.cover__description {
+  position: relative;
+  color: #FFF;
+  z-index: 1;
+  margin-top: 135px;
+}
 
 .cover__description-text {
-  position: absolute;
-  right: 385px;
-  bottom: 62px;
-  z-index: 1;
+  display: inline;
+  margin-left: 422px;
+  margin-bottom: 62px;
+  margin-right: 60px;
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  word-spacing: 18px;
+  word-spacing: 17px;
 }
 
 .bet-button {
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
-  z-index: 1;
   width: 257px;
-  height: 52px;
-  border: 1px solid #fff;
+  min-height: 52px;
+  border: 1px solid currentColor;
   color: #fff;
+  font-family: Raleway;
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
