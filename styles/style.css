@@ -11,15 +11,21 @@
   text-underline-offset: 5px;
 }
 
-.header__address {
+.adress {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  font-family: Raleway;
+  font-size: 100%;
+  font-style: normal;
   line-height: 24.3px;
+}
+
+.header__address {
   margin-left: 355px;
   border: 0;
   padding: 0;
   vertical-align: baseline;
-  font-family: Raleway;
-  font-style: normal;
-  font-size: 100%;
 }
 
 .header__logo-image {
@@ -58,7 +64,8 @@
 
 .overlay {
   position: absolute;
-  inset: 0; /* при использовании абсолютного позиционирования
+  inset: 0;
+  /* при использовании абсолютного позиционирования
   необходимо указывать сразу 2 координаты для правильного отображения во всех
   браузерах, inset это шорткат для всех 4 направлений */
   width: 100%;
@@ -73,23 +80,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1340px;
+  gap: 20px;
   width: 100%;
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 700;
   font-size: 100px;
   font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 30px;
   line-height: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  gap: 20px;
+  letter-spacing: 30px;
+  text-transform: uppercase;
 }
 
 .aligned-text {
   display: block;
-  line-height: 115px;
   margin-top: 165px;
+  line-height: 115px;
 }
 
 .aligned-text_center {
@@ -112,16 +119,16 @@
 
 .cover__description {
   position: relative;
-  color: #FFF;
   z-index: 1;
   margin-top: 135px;
+  color: #fff;
 }
 
 .cover__description-text {
   display: inline;
-  margin-left: 422px;
-  margin-bottom: 62px;
   margin-right: 60px;
+  margin-bottom: 62px;
+  margin-left: 422px;
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
@@ -290,13 +297,15 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  width: 1340px;
-  height: 97px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr;
+  max-width: 1340px;
+  min-height: 97px;
   margin-right: auto;
   margin-bottom: 90px;
   margin-left: auto;
+  padding-top: 3px;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -304,33 +313,13 @@
   text-underline-offset: 3px;
 }
 
-.footer__adress {
-  width: 240px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  vertical-align: baseline;
-  font: inherit;
-  font-size: 100%;
-}
-
 .footer__menu {
+  min-width: 149px;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
   text-align: center;
-}
-
-.footer__social {
-  width: 240px;
-  height: 48px;
-}
-
-.footer__social-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 48px;
 }
 
 .footer__menu-list-item {
@@ -341,8 +330,19 @@
   list-style-type: none;
 }
 
-.footer__social-icon {
+.footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  height: 48px;
+  margin-left: 355px;
+}
+
+.footer__social-link {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  height: 48px;
+}
+
+.footer__social-icon {
+  height: 100%;
 }
