@@ -124,18 +124,16 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 344px min-content 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
-  gap: 78px;
+  gap: 31px;
   margin-top: 135px;
   color: #fff;
 }
 
 .cover__description-text {
-  grid-column: 2 / 3;
-  justify-self: center;
+  justify-self: flex-end;
   width: 633px;
-  min-height: 28px;
   margin-top: 13px;
   font-weight: 400;
   font-size: 22px;
@@ -146,7 +144,7 @@
 }
 
 .bet-button {
-  align-self: center;
+  justify-self: center;
   width: 257px;
   min-height: 52px;
   border: 1px solid currentColor;
